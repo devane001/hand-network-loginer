@@ -88,7 +88,7 @@ func onReady() {
 		login.Password = authorization.Password
 		login.Login()
 		for {
-			time.Sleep(time.Duration(login.HeartBeatCyc-10000) * time.Millisecond)
+			time.Sleep(time.Duration(float32(login.HeartBeatCyc)*0.8) * time.Millisecond)
 			login.HeartBeat()
 		}
 	}()

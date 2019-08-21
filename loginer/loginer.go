@@ -60,6 +60,12 @@ func (loginer *Loginer) Login() {
 }
 
 func (loginer *Loginer) HeartBeat() {
+	defer func() {
+		if r := recover(); r != nil {
+			log.Println("recovered by relogin.")
+			loginer.Login()
+		}
+	}()
 	client := &http.Client{}
 	log.Printf(`heart beat by serial number: %v`, loginer.SerialNo)
 	req, err := http.NewRequest("POST", HeartBeatURL, strings.NewReader(fmt.Sprintf(`serialNo=%v`, loginer.SerialNo)))
