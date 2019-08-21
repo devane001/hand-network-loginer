@@ -66,7 +66,6 @@ func main() {
 
 func onReady() {
 	systray.SetIcon(icon.Data)
-	systray.SetTitle("Hand Network Loginer")
 	systray.SetTooltip("Auto login hand network and monitor network state.")
 	aboutMenuItem := systray.AddMenuItem("About", "About the software")
 	quitMenuItem := systray.AddMenuItem("Quit", "Quit the whole app")
