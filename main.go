@@ -76,7 +76,7 @@ func onReady() {
 				systray.Quit()
 				return
 			case <-aboutMenuItem.ClickedCh:
-				open.Run("https://github.com/xausky/hand-network")
+				open.Run("https://github.com/wmzzh117/hand-network-loginer")
 			}
 		}
 	}()
