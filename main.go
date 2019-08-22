@@ -14,8 +14,8 @@ import (
 
 	"github.com/getlantern/systray"
 	"github.com/skratchdot/open-golang/open"
-	"github.com/xausky/hand-network-loginer/icon"
-	"github.com/xausky/hand-network-loginer/loginer"
+	"github.com/wmzzh117/hand-network-loginer/icon"
+	"github.com/wmzzh117/hand-network-loginer/loginer"
 
 	"github.com/shibukawa/configdir"
 	"golang.org/x/crypto/ssh/terminal"
@@ -65,7 +65,7 @@ func main() {
 }
 
 func onReady() {
-	systray.SetIcon(icon.HandIcon)
+	systray.SetIcon(icon.Data)
 	systray.SetTooltip("Auto login hand network and monitor network state.")
 	aboutMenuItem := systray.AddMenuItem("About", "About the software")
 	quitMenuItem := systray.AddMenuItem("Quit", "Quit the whole app")
